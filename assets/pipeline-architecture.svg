@@ -1,0 +1,130 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="960" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FAFC"/>
+      <stop offset="1" stop-color="#EEF4FF"/>
+    </linearGradient>
+    <linearGradient id="header" x1="110" y1="70" x2="1490" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#183B6B"/>
+      <stop offset="1" stop-color="#27559A"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#A6B7D5" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .headerTitle { font: 800 38px 'Segoe UI', Tahoma, sans-serif; fill: #FFFFFF; }
+      .headerSub { font: 500 18px 'Segoe UI', Tahoma, sans-serif; fill: #DCE8FF; }
+      .sectionTitle { font: 700 22px 'Segoe UI', Tahoma, sans-serif; fill: #16365F; }
+      .sectionText { font: 500 16px 'Segoe UI', Tahoma, sans-serif; fill: #4A607F; }
+      .cardTitle { font: 700 24px 'Segoe UI', Tahoma, sans-serif; fill: #182B49; }
+      .cardAccent { font: 700 16px 'Segoe UI', Tahoma, sans-serif; }
+      .cardText { font: 500 16px 'Segoe UI', Tahoma, sans-serif; fill: #405673; }
+      .chipTitle { font: 700 18px 'Segoe UI', Tahoma, sans-serif; fill: #15345D; }
+      .chipText { font: 500 14px 'Segoe UI', Tahoma, sans-serif; fill: #5D718F; }
+      .smallLabel { font: 700 15px 'Segoe UI', Tahoma, sans-serif; fill: #1E3A63; }
+    </style>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0 0L12 6L0 12V0Z" fill="#294F87"/>
+    </marker>
+    <marker id="arrowSoft" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0 0L12 6L0 12V0Z" fill="#6A7FA4"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="960" fill="url(#bg)"/>
+
+  <rect x="110" y="48" width="1380" height="92" rx="24" fill="url(#header)" filter="url(#cardShadow)"/>
+  <text x="170" y="102" class="headerTitle">End-to-End Encrypted Data Pipeline</text>
+  <text x="171" y="128" class="headerSub">Healthcare CSV -> Validation -> RSA Encryption -> Parquet -> Verification -> Restricted Export -> SQLite Warehouse</text>
+
+  <rect x="110" y="172" width="300" height="164" rx="24" fill="#FFFFFF" stroke="#D6E1F0" stroke-width="2" filter="url(#cardShadow)"/>
+  <text x="138" y="216" class="sectionTitle">Project Goal</text>
+  <text x="138" y="248" class="sectionText">Protect sensitive healthcare data during ETL,</text>
+  <text x="138" y="274" class="sectionText">verify that encrypted values can be restored,</text>
+  <text x="138" y="300" class="sectionText">and publish only safe downstream outputs.</text>
+
+  <rect x="430" y="172" width="1060" height="164" rx="24" fill="#FFFFFF" stroke="#D6E1F0" stroke-width="2" filter="url(#cardShadow)"/>
+  <text x="462" y="216" class="sectionTitle">Orchestration Layer</text>
+  <rect x="462" y="238" width="996" height="70" rx="18" fill="#F4F7FD" stroke="#C9D7EE" stroke-width="2"/>
+  <circle cx="508" cy="273" r="18" fill="#FF6A3D"/>
+  <path d="M508 247C518 252 528 263 529 275C517 274 508 266 502 256C504 252 506 249 508 247Z" fill="#D94E22"/>
+  <path d="M508 273C516 255 534 250 551 255C544 270 528 282 508 284V273Z" fill="#2AB4E2"/>
+  <path d="M508 273C494 256 475 253 461 260C469 274 484 283 508 284V273Z" fill="#48D07E"/>
+  <text x="544" y="266" class="cardTitle">Apache Airflow</text>
+  <text x="544" y="292" style="font:700 16px 'Segoe UI', Tahoma, sans-serif; fill:#6559C7;">Schedules and orchestrates the pipeline tasks in sequence</text>
+
+  <text x="110" y="390" class="sectionTitle">Pipeline Flow</text>
+
+  <rect x="110" y="430" width="270" height="248" rx="26" fill="#FFFFFF" stroke="#D6E1F0" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="132" y="452" width="72" height="72" rx="18" fill="#EAF4FF"/>
+  <path d="M155 506C155 484 171 468 193 468C209 468 223 478 228 493C243 494 255 505 255 520C255 537 242 550 223 550H164C145 550 132 537 132 521C132 507 141 495 155 491" stroke="#2C7BE5" stroke-width="4" stroke-linecap="round"/>
+  <text x="245" y="480" class="cardTitle">Healthcare Dataset</text>
+  <text x="245" y="506" class="cardAccent" fill="#2C7BE5">Source CSV</text>
+  <text x="134" y="570" class="cardText">- ใช้ไฟล์ `healthcare_dataset.csv`</text>
+  <text x="134" y="598" class="cardText">- เก็บข้อมูลผู้ป่วยและค่าใช้จ่าย</text>
+  <text x="134" y="626" class="cardText">- `Billing Amount` เป็น field ที่ sensitive</text>
+  <text x="134" y="654" class="cardText">- เป็นต้นทางของ pipeline ทั้งหมด</text>
+
+  <rect x="450" y="430" width="270" height="248" rx="26" fill="#FFFFFF" stroke="#D6E1F0" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="472" y="452" width="72" height="72" rx="18" fill="#FFF7E8"/>
+  <path d="M486 470C486 458 496 448 508 448H528V485C528 497 518 507 506 507H497C490 507 486 501 486 494V470Z" fill="#306998"/>
+  <path d="M530 530C530 542 520 552 508 552H488V515C488 503 498 493 510 493H519C526 493 530 499 530 506V530Z" fill="#FFD43B"/>
+  <text x="565" y="480" class="cardTitle">Python</text>
+  <text x="565" y="506" class="cardAccent" fill="#D38A00">Validate and Control</text>
+  <text x="474" y="570" class="cardText">- ตรวจว่า source file มีอยู่จริง</text>
+  <text x="474" y="598" class="cardText">- คุม ETL logic ในแต่ละ step</text>
+  <text x="474" y="626" class="cardText">- เตรียมข้อมูลก่อนเข้ารหัส</text>
+  <text x="474" y="654" class="cardText">- เป็น business logic หลักของ pipeline</text>
+
+  <rect x="790" y="430" width="270" height="248" rx="26" fill="#FFFFFF" stroke="#D6E1F0" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="812" y="452" width="72" height="72" rx="18" fill="#EEFCEF"/>
+  <rect x="826" y="468" width="42" height="50" rx="6" fill="none" stroke="#1E9B46" stroke-width="4"/>
+  <path d="M833 481H861M833 494H861M833 507H854" stroke="#1E9B46" stroke-width="4" stroke-linecap="round"/>
+  <text x="905" y="480" class="cardTitle">Cryptography</text>
+  <text x="905" y="506" class="cardAccent" fill="#23924A">RSA Encryption</text>
+  <text x="814" y="570" class="cardText">- เข้ารหัส `Billing Amount`</text>
+  <text x="814" y="598" class="cardText">- สร้าง public/private key ที่ runtime</text>
+  <text x="814" y="626" class="cardText">- ลดความเสี่ยงจากการเปิดเผยข้อมูล</text>
+  <text x="814" y="654" class="cardText">- แยก field อ่อนไหวออกจาก plaintext</text>
+
+  <rect x="1130" y="430" width="360" height="248" rx="26" fill="#FFFFFF" stroke="#D6E1F0" stroke-width="2" filter="url(#cardShadow)"/>
+  <rect x="1152" y="452" width="72" height="72" rx="18" fill="#EEF4FF"/>
+  <path d="M1170 468H1210C1221 468 1230 477 1230 488V518C1230 529 1221 538 1210 538H1170C1159 538 1150 529 1150 518V488C1150 477 1159 468 1170 468Z" fill="none" stroke="#2C7BE5" stroke-width="4"/>
+  <path d="M1166 482H1214M1166 498H1214M1166 514H1200" stroke="#2C7BE5" stroke-width="4" stroke-linecap="round"/>
+  <text x="1245" y="480" class="cardTitle">PyArrow + Parquet</text>
+  <text x="1245" y="506" class="cardAccent" fill="#2C7BE5">Transform and Storage</text>
+  <text x="1154" y="570" class="cardText">- แปลง encrypted rows เป็น Parquet</text>
+  <text x="1154" y="598" class="cardText">- เก็บข้อมูลแบบ columnar เพื่อใช้งานต่อ</text>
+  <text x="1154" y="626" class="cardText">- รองรับขั้นตอน verify และ downstream export</text>
+  <text x="1154" y="654" class="cardText">- เป็น secure intermediate output ของระบบ</text>
+
+  <path d="M380 554H448" stroke="#294F87" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M720 554H788" stroke="#294F87" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M1060 554H1128" stroke="#294F87" stroke-width="5" marker-end="url(#arrow)"/>
+
+  <rect x="310" y="736" width="980" height="138" rx="26" fill="#FFFFFF" stroke="#D6E1F0" stroke-width="2" filter="url(#cardShadow)"/>
+  <text x="344" y="780" class="cardTitle">Verification, Safe Delivery, and Warehouse Load</text>
+  <text x="344" y="810" class="cardAccent" fill="#0F8E95">Decrypt, Compare, Export, Persist</text>
+  <text x="344" y="844" class="cardText">- อ่าน Parquet กลับมาแล้วถอดรหัสเพื่อตรวจว่า value ตรงกับต้นฉบับ</text>
+  <text x="344" y="870" class="cardText">- export เฉพาะคอลัมน์ที่ปลอดภัย เช่น `Name` และ `Age`</text>
+  <text x="860" y="844" class="cardText">- โหลด raw, encrypted, safe export, และ audit metadata เข้า SQLite</text>
+
+  <path d="M925 678V724" stroke="#6A7FA4" stroke-width="4" stroke-dasharray="8 8" marker-end="url(#arrowSoft)"/>
+
+  <text x="110" y="904" class="sectionTitle">Tool Summary</text>
+
+  <rect x="290" y="894" width="220" height="42" rx="14" fill="#FFFFFF" stroke="#D3E0F1"/>
+  <text x="316" y="921" class="smallLabel">Python: validate source and run ETL logic</text>
+
+  <rect x="530" y="894" width="238" height="42" rx="14" fill="#FFFFFF" stroke="#D3E0F1"/>
+  <text x="556" y="921" class="smallLabel">Cryptography: encrypt sensitive values</text>
+
+  <rect x="788" y="894" width="260" height="42" rx="14" fill="#FFFFFF" stroke="#D3E0F1"/>
+  <text x="814" y="921" class="smallLabel">PyArrow/Parquet: store secure transformed data</text>
+
+  <rect x="1068" y="894" width="202" height="42" rx="14" fill="#FFFFFF" stroke="#D3E0F1"/>
+  <text x="1094" y="921" class="smallLabel">Airflow: orchestrate the workflow</text>
+
+  <rect x="1290" y="894" width="200" height="42" rx="14" fill="#FFFFFF" stroke="#D3E0F1"/>
+  <text x="1316" y="921" class="smallLabel">SQLite: local warehouse and audit store</text>
+</svg>

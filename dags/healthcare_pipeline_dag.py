@@ -5,7 +5,12 @@ from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 
-from pipeline.healthcare_etl import decrypt_verify_and_export_csv, encrypt_csv_to_parquet, validate_source
+from pipeline.healthcare_etl import (
+    decrypt_verify_and_export_csv,
+    encrypt_csv_to_parquet,
+    load_to_sqlite_warehouse,
+    validate_source,
+)
 
 
 with DAG(
@@ -30,4 +35,9 @@ with DAG(
         python_callable=decrypt_verify_and_export_csv,
     )
 
-    validate_source_task >> encrypt_to_parquet_task >> decrypt_verify_export_task
+    load_to_sqlite_task = PythonOperator(
+        task_id="load_to_sqlite_warehouse",
+        python_callable=load_to_sqlite_warehouse,
+    )
+
+    validate_source_task >> encrypt_to_parquet_task >> decrypt_verify_export_task >> load_to_sqlite_task
