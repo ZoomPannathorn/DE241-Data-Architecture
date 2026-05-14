@@ -179,10 +179,10 @@ flowchart LR
 <img width="800" height="112" alt="image" src="https://github.com/user-attachments/assets/331f37d9-ad7f-4bb3-9f60-4dac2c5f6c31" />
 
 ## 2. เช็กว่ามีตารางอะไรบ้าง
-<img width="800" height="50" alt="image" src="https://github.com/user-attachments/assets/07453ea6-40a5-4727-b191-8fe6ce029cad" />
+<img width="120" height="50" alt="image" src="https://github.com/user-attachments/assets/07453ea6-40a5-4727-b191-8fe6ce029cad" />
 
 ## 3. ดูข้อมูลจากตาราง raw_healthcare
-<img width="777" height="70" alt="image" src="https://github.com/user-attachments/assets/1d6ec80c-08b0-4dd3-b1b8-aaab62011021" />
+<img width="127" height="50" alt="image" src="https://github.com/user-attachments/assets/1d6ec80c-08b0-4dd3-b1b8-aaab62011021" />
 
 ## 4. ดูข้อมูลจากตาราง encrypted_healthcare
 <img width="882" height="120" alt="image" src="https://github.com/user-attachments/assets/59f78777-bead-454e-8f4a-52d44c3aa17d" />
