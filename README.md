@@ -89,9 +89,9 @@ flowchart LR
 
 ```md
 ![Airflow DAG Success](assets/airflow-dag-success.png)
-<img width="1892" height="865" alt="image" src="https://github.com/user-attachments/assets/f34fce65-abe9-4e4f-aeb6-1488929db16a" />
 
 ```
+<img width="1892" height="865" alt="image" src="https://github.com/user-attachments/assets/a608f2c7-23f3-46b8-af7d-23e412df0f9a" />
 
 ---
 
